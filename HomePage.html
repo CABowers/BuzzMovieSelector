@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1> Welcome to Classified's Buzz Movie Selector</h1>
+        <div align="right"><button type="button" class="btn btn-default" onClick="logout()" >Logout</button></div>
+    </div>
+
+    <ul class="nav nav-pills nav-justified"><!-- replace tabs with pills for pills-->
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#search">Search</a></li>
+        <li><a data-toggle="tab" href="#menu2">Update Settings</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active container-fluid">
+            <h3>Home</h3>
+            <p>This is Classified's Buzz Movie Selector. This is the web version of the Android Application.
+                <br> Enjoy looking up a movie.
+            </p>
+        </div>
+        <div id="search" class="tab-pane fade container-fluid">
+            <h3>Search for a movie</h3>
+
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" style="width:20%">
+
+            </div>
+
+            <button type="button" class="btn btn-default" onClick="searchByName()">Search</button>
+            <P id = "info"></P>
+        </div>
+        <div id="menu2" class="tab-pane fade container-fluid">
+            <h3>Update Settings</h3>
+
+            <div class ="inline">
+                <div id="uPass" style="display:inline-block" class="tab-pane fade in active container-fluid">
+                    <h3>Update Password</h3>
+                    <div class="form-group">
+                        <label for="pEmail">Email:</label>
+                        <input type="text" class="form-control" id="pEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="op"> Old Password:</label>
+                        <input type="password" class="form-control" id="op">
+                    </div>
+                    <div class="form-group">
+                        <label for="np">New Password:</label>
+                        <input type="password" class="form-control" id="np">
+                    </div>
+
+                    <button type="button" class="btn btn-default" onClick="updatePassword()">Update Password</button>
+                    <p id = "pStatus"></p>
+                </div>
+                <div id="uEmail" style="display:inline-block" class="tab-pane fade in active container-fluid">
+                    <h3>Update Email</h3>
+                    <div class="form-group">
+                        <label for="e1">Old Email:</label>
+                        <input type="text" class="form-control" id="e1">
+                    </div>
+                    <div class="form-group">
+                        <label for="e2">New Email:</label>
+                        <input type="text" class="form-control" id="e2">
+                    </div>
+                    <div class="form-group">
+                        <label for="ePass">Password:</label>
+                        <input type="password" class="form-control" id="ePass">
+                    </div>
+
+                    <button type="button" class="btn btn-default" onClick="updateEmail()">Update Email</button>
+                    <p id="eStatus"></p>
+                </div>
+            </div>
+
+
+            <!--
+            <p id="demo">This is some text.</p>
+            <button type="button" onclick="myFunction()">Click Me!</button>
+            -->
+
+        </div>
+    </div>
+
+
+</body>
+</html>

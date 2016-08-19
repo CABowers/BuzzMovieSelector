@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recover Password</title>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1> Type in email for temporary password </h1>
+        <div class="form-group">
+            <label for="rEmail">Email:</label>
+            <input type="text" class="form-control" id="rEmail" style="width:20%">
+        </div>
+        <button type="button" class="btn btn-default" onClick="forgot()">Send Email</button>
+        <button type="button" class="btn btn-default" onClick="homePage()">Cancel</button>
+        <p id = "update"> </p>
+    </div>
+
+</body>
+</html>
